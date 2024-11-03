@@ -12,18 +12,18 @@ import kotlinx.coroutines.flow.Flow
 interface UserDAO {
 
     @Upsert
-    suspend fun insert(users: User)
+    fun insert(users: User)
 
     @Delete
-    suspend fun delete(user: User)
+    fun delete(user: User)
 
     @Query("SELECT * FROM users ORDER BY first_name ASC")
-    fun getAllOrderedByFirstName() : Flow<List<User>>
+    fun getAllOrderedByFirstName() : List<User>
 
     @Query("SELECT * FROM users ORDER BY last_name ASC")
-    fun getAllOrderedByLastName() : Flow<List<User>>
+    fun getAllOrderedByLastName() : List<User>
 
     @Query("SELECT * FROM users ORDER BY phone ASC")
-    fun getAllOrderedByPhone() : Flow<List<User>>
+    fun getAllOrderedByPhone() : List<User>
 
 }
