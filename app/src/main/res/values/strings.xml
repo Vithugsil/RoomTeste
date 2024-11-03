@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Tentativa1</string>
+
+    <string name="user_inserted_successfully">Usuário inserido com sucesso!</string>
+    <string name="user_error_to_insert">Erro ao inserir usuário!</string>
+</resources>
